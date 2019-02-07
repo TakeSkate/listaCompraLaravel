@@ -33,6 +33,11 @@
                 {{$producto[1]}}
 
             </h4>
+
+            <span>Estado actual: </span><a href="javascript:void(0)" class="btn btn-danger">Comprado</a><br>
+            <a href="/productos/edit/{{$id}}" class="btn btn-dark">Editar</a>
+            <a href="/productos" class="btn btn-light">Volver</a>
+
         </div>
     </div>
 

@@ -17,7 +17,7 @@ class ProductoController extends Controller
     public function getShow($id){
         $arrayProductos = $this->jarray();
         $producto = $arrayProductos[$id];
-        return view('productos.show', array('producto'=>$producto));
+        return view('productos.show', array('id'=>$id,'producto'=>$producto));
     }
 
     public function getCreate(){
