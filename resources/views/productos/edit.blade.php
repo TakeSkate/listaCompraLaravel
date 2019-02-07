@@ -1,22 +1,58 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Editar Producto {{$id}}</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    </head>
-    <body>
 @extends('layouts.master')
 
 @section('content')
+<div class="row" style="margin-top:40px">
+   <div class="offset-md-3 col-md-6">
+      <div class="card">
+         <div class="card-header text-center">
+           Modificar producto
+         </div>
+         <div class="card-body" style="padding:30px">
 
-   <p>Editar {{$id}}</p>
+            <form action="" method="post">
+ {{method_field('PUT')}}
+               @csrf
 
+
+
+
+
+            <div class="form-group">
+               <label for="title">Nombre:</label>
+               <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
+            </div>
+
+            <div class="form-group">
+               <label for="precio">Precio:</label>
+           <input class="form-control" type="number" id="precio" placeholder="Precio">
+            </div>
+
+            <div class="form-group">
+               <label for="categoria">Categoria:</label>
+               <input class="form-control" type="text" id="categoria" placeholder="Categoria">
+            </div>
+
+
+               <div class="form-group">
+                  <label for="imagen">Imagen:</label>
+                  <input class="form-control" type="text" id="imagen" placeholder="Imagen">
+               </div>
+
+            <div class="form-group">
+               <label for="descripcion">Descripción</label>
+               <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="form-group text-center">
+               <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
+                  Modificar producto
+               </button>
+            </div>
+
+            </form>
+
+         </div>
+      </div>
+   </div>
+</div>
 @stop
-    </body>
-</html>
