@@ -9,11 +9,8 @@
          </div>
          <div class="card-body" style="padding:30px">
 
-            <form action="" method="post">
+            <form action="{{url('productos/create')}}" method="post">
                @csrf
-
-
-
 
 
             <div class="form-group">
@@ -23,18 +20,18 @@
 
             <div class="form-group">
                <label for="precio">Precio:</label>
-           <input class="form-control" type="number" id="precio" placeholder="Precio">
+           <input class="form-control" type="number" name="precio" id="precio" placeholder="Precio">
             </div>
 
             <div class="form-group">
                <label for="categoria">Categoria:</label>
-               <input class="form-control" type="text" id="categoria" placeholder="Categoria">
+               <input class="form-control" type="text" name="categoria" id="categoria" placeholder="Categoria">
             </div>
 
 
                <div class="form-group">
                   <label for="imagen">Imagen:</label>
-                  <input class="form-control" type="text" id="imagen" placeholder="Imagen">
+                  <input class="form-control" type="text" name="imagen" id="imagen" placeholder="Imagen">
                </div>
 
             <div class="form-group">

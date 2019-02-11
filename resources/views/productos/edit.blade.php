@@ -13,10 +13,6 @@
  {{method_field('PUT')}}
                @csrf
 
-
-
-
-
             <div class="form-group">
                <label for="title">Nombre:</label>
                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" value="{{$producto->nombre}}">
@@ -24,23 +20,23 @@
 
             <div class="form-group">
                <label for="precio">Precio:</label>
-           <input class="form-control" type="number" id="precio" placeholder="Precio" value="{{$producto->precio}}">
+           <input class="form-control" type="number" name="precio" id="precio" placeholder="Precio" value="{{$producto->precio}}">
             </div>
 
             <div class="form-group">
                <label for="categoria">Categoria:</label>
-               <input class="form-control" type="text" id="categoria" placeholder="Categoria" value="{{$producto->categoria}}">
+               <input class="form-control" type="text" name="categoria" id="categoria" placeholder="Categoria" value="{{$producto->categoria}}">
             </div>
 
 
                <div class="form-group">
                   <label for="imagen">Imagen:</label>
-                  <input class="form-control" type="text" id="imagen" placeholder="Imagen" value="{{$producto->imagen}}">
+                  <input class="form-control" type="text" name="imagen" id="imagen" placeholder="Imagen" value="{{$producto->imagen}}">
                </div>
 
             <div class="form-group">
                <label for="descripcion">Descripción</label>
-               <textarea name="descripcion" id="descripcion" class="form-control" rows="3">{{$producto->descripcion}}</textarea>
+               <textarea name="descripcion" id="descripcion" dirname="descripcion" class="form-control" rows="3">{{$producto->descripcion}}</textarea>
             </div>
 
             <div class="form-group text-center">
