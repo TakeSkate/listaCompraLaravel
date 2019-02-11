@@ -19,17 +19,13 @@ class DatabaseSeeder extends Seeder {
         Producto::truncate();
         foreach( self::$arrayProductos as $producto ) {
             $tabla = new Producto;
-            $tabla->nombre = $producto['nombre'];
-            $tabla->precio = $producto['precio'];
-            $tabla->categoria = $producto['categoria'];
-            $tabla->imagen = $producto['imagen'];
-            $tabla->pendiente = $producto['pendiente'];
-            $tabla->descripcion = $producto['descripcion'];
+            $tabla->nombre = $producto[0];
+            $tabla->categoria = $producto[1];
             $tabla->save();
         }
     }
 
-    private $arrayProductos = array(
+    private static $arrayProductos = array(
         array('Aceite','Aceites y grasas'),
         array('Aceite de oliva','Aceites y grasas'),
         array('Grasa comestible','Aceites y grasas'),
