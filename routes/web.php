@@ -22,6 +22,9 @@ Route::group(['middleware' => 'auth'], function (){
 
         Route::get('/show/{id}', 'ProductoController@getShow');
 
+        Route::put('/comprar/{id}', 'ProductoController@putcomprar');
+
+
         Route::get('/create', 'ProductoController@getCreate');
 
         Route::post('/create', 'ProductoController@postCreate');

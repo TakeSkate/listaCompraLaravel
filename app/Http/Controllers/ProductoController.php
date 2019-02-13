@@ -25,6 +25,19 @@ class ProductoController extends Controller
         return view('productos.show', array('id'=>$id,'producto'=>$producto,'boton'=>$boton));
     }
 
+    public function putcomprar($id){
+        $producto = Producto::findOrFail($id);
+        if ( $producto->pendiente == 0 ){
+            $producto->pendiente = 1;
+        }else{
+            $producto->pendiente = 0;
+        }
+
+        $producto->save();
+        return redirect('/productos/show/' . $producto->id);
+    }
+
+
     public function getCreate(){
         return view('productos.create');
     }

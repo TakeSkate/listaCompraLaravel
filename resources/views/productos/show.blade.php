@@ -26,8 +26,11 @@
                 {{$producto->categoria}}
 
             </h4>
-
-            <span>Estado actual: </span><a href="javascript:void(0)" class="btn btn-danger">{{$boton}}</a><br>
+<form action="{{url('productos/comprar/'.$id)}}" method="post">
+    {{method_field('PUT')}}
+    @csrf
+            <span>Estado actual: </span><input type="submit" class="btn btn-danger" value="{{$boton}}"><br>
+</form>
             <a href="/productos/edit/{{$id}}" class="btn btn-dark">Editar</a>
             <a href="/productos" class="btn btn-light">Volver</a>
 
